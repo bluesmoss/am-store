@@ -1,0 +1,44 @@
+<input type="text" [(ngModel)]="title">
+{{ title }}
+
+
+<input type="text" [(ngModel)]="power">
+{{ power | exponential }}
+
+<div *ngIf="title === 'blue'">
+  Este es un div
+</div>
+
+
+<div [ngSwitch]="title">
+  <p *ngSwitchCase="'blue'">blue</p>
+  <p *ngSwitchCase="'red'">red</p>
+  <p *ngSwitchCase="'green'">green</p>
+  <p *ngSwitchDefault>No hay match</p>
+</div>
+
+
+<div *ngIf="title === 'Store'; then store else welcome">
+  Simple vista
+</div>
+<!-- Vista o template-->
+<ng-template #store>
+  Mostrando contenido
+</ng-template>
+
+<ng-template #welcome>
+  Bienvenido a Platzi Store
+</ng-template>
+
+
+
+<button (click)="addItem()">Add item</button>
+
+
+<!-- <ul>
+  <li *ngIf="items.length===0">La lista está vacía</li>
+  <li *ngFor="let name of items; index as i">
+    {{name}} {{i}}
+    <button (click)="deleteItem(i)">Delete</button>
+  </li>
+</ul> -->
