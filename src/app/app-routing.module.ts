@@ -5,9 +5,9 @@ import { ContactComponent } from './components/contact/contact.component';
 import { DemoComponent } from './components/demo/demo.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { LayoutComponent } from './components/layout/layout.component';
-import { HomeModule } from './components/home/home.module';
+import { HomeModule } from './home/home.module';
 import { AdminGuard } from './admin.guard';
-import { NotFoundModule } from './components/not-found/not-found.module';
+import { NotFoundModule } from './not-found/not-found.module';
 
 const routes: Routes = [
   {
@@ -21,7 +21,7 @@ const routes: Routes = [
       },
       {
         path: 'home',
-        loadChildren: () => import('./components/home/home.module').then(m  => m.HomeModule)
+        loadChildren: () => import('./home/home.module').then(m  => m.HomeModule)
       },
       {
         path: 'products',
@@ -45,7 +45,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    loadChildren: () => import('./components/not-found/not-found.module').then(m  => m.NotFoundModule)
+    loadChildren: () => import('./not-found/not-found.module').then(m  => m.NotFoundModule)
   }
 ];
 
