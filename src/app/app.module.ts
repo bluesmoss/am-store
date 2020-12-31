@@ -18,6 +18,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { LayoutComponent } from './components/layout/layout.component';
 import { SharedModule } from './shared/shared.module';
+import { CoreModule } from './core/core.module';
 
 registerLocaleData(localeEs);
 
@@ -38,7 +39,8 @@ registerLocaleData(localeEs);
     AppRoutingModule,
     FormsModule,
     SwiperModule,
-    SharedModule
+    SharedModule,
+    CoreModule
   ],
   providers: [ { provide: LOCALE_ID, useValue: 'es' } ],
   bootstrap: [AppComponent]
