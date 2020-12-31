@@ -13,13 +13,14 @@ import localeEs from '@angular/common/locales/es';
 import { registerLocaleData } from '@angular/common';
 import { ExponentialPipe } from './pipes/exponential.pipe';
 import { HighlightDirective } from './directives/highlight.directive';
-import { HomeComponent } from './components/home/home.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ProductsComponent } from './components/products/products.component';
 import { DemoComponent } from './components/demo/demo.component';
-import { HeaderComponent } from './components/header/header.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { BannerComponent } from './components/banner/banner.component';
+import { HeaderComponent } from './shared/components/header/header.component';
+import { FooterComponent } from './shared/components/footer/footer.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+import { LayoutComponent } from './components/layout/layout.component';
 
 registerLocaleData(localeEs);
 
@@ -30,13 +31,14 @@ registerLocaleData(localeEs);
     CartComponent,
     ExponentialPipe,
     HighlightDirective,
-    HomeComponent,
     ContactComponent,
     ProductsComponent,
     DemoComponent,
     HeaderComponent,
     FooterComponent,
-    BannerComponent
+    NotFoundComponent,
+    ProductDetailComponent,
+    LayoutComponent
   ],
   imports: [
     BrowserModule,
