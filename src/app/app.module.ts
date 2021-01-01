@@ -11,7 +11,6 @@ import { CartComponent } from './cart/cart.component';
 
 import localeEs from '@angular/common/locales/es';
 import { registerLocaleData } from '@angular/common';
-import { ContactComponent } from './contact/contact.component';
 import { ProductsComponent } from './products/products.component';
 import { DemoComponent } from './demo/demo.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
@@ -26,7 +25,6 @@ registerLocaleData(localeEs);
     AppComponent,
     ProductComponent,
     CartComponent,
-    ContactComponent,
     ProductsComponent,
     DemoComponent,
     ProductDetailComponent,
