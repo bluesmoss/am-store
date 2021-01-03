@@ -24,6 +24,5 @@ export class DemoComponent implements OnInit {
   deleteItem(index: number) {
     this.items.splice(index, 1);
   }
-  
 
 }

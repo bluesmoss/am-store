@@ -5,13 +5,10 @@ import { SwiperModule } from 'swiper/angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DemoComponent } from './demo/demo.component';
 import { LayoutComponent } from './layout/layout.component';
 
 import localeEs from '@angular/common/locales/es';
 import { registerLocaleData } from '@angular/common';
-
-
 
 import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './core/core.module';
@@ -21,7 +18,6 @@ registerLocaleData(localeEs);
 @NgModule({
   declarations: [
     AppComponent,
-    DemoComponent,
     LayoutComponent
   ],
   imports: [

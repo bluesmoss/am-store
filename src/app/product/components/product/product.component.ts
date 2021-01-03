@@ -15,7 +15,7 @@ import { Product } from '../../../product.model';
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.scss']
 })
-export class ProductComponent implements OnInit {
+export class ProductComponent implements OnInit, OnDestroy {
 
   @Input() product: Product;
   @Output() productClicked: EventEmitter<any> =  new EventEmitter();
