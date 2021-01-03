@@ -5,7 +5,6 @@ import { SwiperModule } from 'swiper/angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CartComponent } from './cart/cart.component';
 import { DemoComponent } from './demo/demo.component';
 import { LayoutComponent } from './layout/layout.component';
 
@@ -22,7 +21,6 @@ registerLocaleData(localeEs);
 @NgModule({
   declarations: [
     AppComponent,
-    CartComponent,
     DemoComponent,
     LayoutComponent
   ],
