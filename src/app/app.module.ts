@@ -12,6 +12,7 @@ import { registerLocaleData } from '@angular/common';
 
 import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './core/core.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 registerLocaleData(localeEs);
 
@@ -26,7 +27,8 @@ registerLocaleData(localeEs);
     FormsModule,
     SwiperModule,
     SharedModule,
-    CoreModule
+    CoreModule,
+    BrowserAnimationsModule
   ],
   providers: [ { provide: LOCALE_ID, useValue: 'es' } ],
   bootstrap: [AppComponent]
