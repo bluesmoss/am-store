@@ -17,6 +17,11 @@ import { ListProductsComponent } from './components/list-products/list-products.
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatButtonModule } from '@angular/material/button';
 
 
 
@@ -24,7 +29,8 @@ import { MatSortModule } from '@angular/material/sort';
   declarations: [
     ProductFormComponent,
     NavComponent,
-    ListProductsComponent
+    ListProductsComponent,
+    DashboardComponent
   ],
   imports: [
     CommonModule,
@@ -39,6 +45,10 @@ import { MatSortModule } from '@angular/material/sort';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
+    MatGridListModule,
+    MatCardModule,
+    MatMenuModule,
+    MatButtonModule,
   ]
 })
 export class AdminModule { }
