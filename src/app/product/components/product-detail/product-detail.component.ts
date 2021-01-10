@@ -35,7 +35,6 @@ export class ProductDetailComponent implements OnInit {
   }
 
   createProduct() {
-    console.log('hola');
     const newProduct: Product = {
       id: '234',
       title: 'Blue',
@@ -49,5 +48,19 @@ export class ProductDetailComponent implements OnInit {
       console.log(product);
     })    
   }
+  
+  updateProduct() {
+    const updateProduct: Partial<Product> = {
+      id: '234',
+      title: 'Blue editions',
+      image: 'assets/images/stickers1.png',
+      price: 4900,
+      description: 'New product edition'
 
+    };
+    this.productService.updateProduct('234' ,updateProduct)
+    .subscribe(product => {
+      console.log(product);
+    })    
+  }  
 }
