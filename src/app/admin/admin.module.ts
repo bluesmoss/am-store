@@ -22,6 +22,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
+import { ProductsListComponent } from './components/products-list/products-list.component';
 
 
 
@@ -30,7 +31,8 @@ import { MatButtonModule } from '@angular/material/button';
     ProductFormComponent,
     NavComponent,
     ListProductsComponent,
-    DashboardComponent
+    DashboardComponent,
+    ProductsListComponent
   ],
   imports: [
     CommonModule,
