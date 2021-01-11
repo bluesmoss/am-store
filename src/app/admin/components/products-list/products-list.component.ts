@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from 'src/app/core/services/products/products.service';
+import { Product } from 'src/app/product.model';
 
 @Component({
   selector: 'app-products-list',
@@ -8,7 +9,7 @@ import { ProductsService } from 'src/app/core/services/products/products.service
 })
 export class ProductsListComponent implements OnInit {
 
-    products = [];
+    products: Product[] = [];
     displayedColumns: string[] = ['id', 'title', 'price', 'actions'];
 
   constructor(
@@ -30,9 +31,9 @@ export class ProductsListComponent implements OnInit {
     this.productService.deleteProduct(id)
     .subscribe(response => {
       if (response) {
-        const index = this.products.findIndex(product => product.id === id);
-        this.products.splice(index, 1);
-        this.products = [...this.products];
+        this.products = this.products.filter(product => {
+          return product.id !== id;
+        });        
       }
     });
   }
