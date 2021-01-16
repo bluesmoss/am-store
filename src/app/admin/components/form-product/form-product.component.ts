@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ProductsService } from 'src/app/core/services/products/products.service';
+import { MyValidstors } from 'src/app/utils/validators';
+
 
 @Component({
   selector: 'app-form-product',
@@ -11,8 +13,9 @@ import { ProductsService } from 'src/app/core/services/products/products.service
 export class FormProductComponent implements OnInit {
 
   form: FormGroup;
+
   constructor(
-    private formbuilder: FormBuilder,
+    private formBuilder: FormBuilder,
     private productService: ProductsService,
     private router: Router
   ) {
@@ -37,11 +40,11 @@ export class FormProductComponent implements OnInit {
   }
 
   private buildForm(){
-    this.form = this.formbuilder.group({
+    this.form = this.formBuilder.group({
       id: ['', [Validators.required]],
       title: ['', [Validators.required]],
-      price: [0, [Validators.required]],
-      image: ['', []],
+      price: ['', [Validators.required, MyValidstors.isPriceValid]],
+      image: [''],
       description: ['', [Validators.required]],
     });
   }
